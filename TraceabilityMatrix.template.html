@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Copyright (c) 2012 Rally Software Development Corp. All rights reserved -->
+<html>
+<head>
+  <title>Traceability Matrix</title>
+  <meta name="Name" content="App: Traceability Matrix" />
+  <meta name="Version" content="2012.11.30" />
+  <meta name="Vendor" content="Rally Software" />
+
+  <script type="text/javascript" src="/apps/1.32/sdk.js"></script>
+
+  <script type="text/javascript">
+    function onLoad() {
+      var appCustom = new TraceabilityMatrix();
+      appCustom.display(dojo.body());
+    }
+
+    rally.addOnLoad(onLoad);
+  </script>
+</head>
+
+<body>
+  <div id="chooseButton" class="noPrint"></div>
+  <div id="display">
+      <div id="parentTableContainer" class="tableContainer">
+          <h3><span id="prdName"></span></h3>
+
+          <div id="parentTable"></div>
+      </div>
+      <br/>
+
+      <div id="childTableContainer" class="tableContainer">
+          <h3>SRS Traceability Table</h3>
+
+          <div id="childTable"></div>
+      </div>
+  </div>
+  <div id="signAndDate" class="onlyPrint"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+.tableContainer {
+    display: none;
+    text-align: center;
+}
+
+.onlyPrint {
+    display: none;
+}
+
+#signAndDate {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 50px;
+}
+
+.instructions {
+    max-width: 1000px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.instructions .quote {
+    font-size: 14px;
+    color: #333333;
+    float: left;
+}
+
+.instructions p {
+    width: 400px;
+    font-size: 12px;
+}
+
+.instructionsTitle {
+    font-weight: bold;
+}
+
+.exampleImage {
+    float: left;
+    margin: 10px;
+    /* for IE */
+    filter: alpha(opacity = 70);
+    /* CSS3 standard */
+    opacity: 0.7;
+}
+
+@media print {
+    .noPrint {
+        display: none;
+    }
+
+    #date {
+        margin-bottom: 50px;
+    }
+
+    @page {
+        height: 7.5in;
+        width: 10in;
+        margin: .5in;
+        size: landscape;
+    }
+
+    .onlyPrint {
+        display: block;
+    }
+
+    #appHeaderright {
+        display: none;
+    }
+}
